@@ -19,6 +19,9 @@
 
   networking.hostName = "nixos"; # Define your hostname.
 
+  # Fix for file manager
+  services.gvfs.enable = true;
+
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -70,7 +73,7 @@
   users.users."anno" = {
     isNormalUser = true;
     description = "ANNO";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "kvm" ];
     packages = with pkgs; [
       kdePackages.kate
     ];
