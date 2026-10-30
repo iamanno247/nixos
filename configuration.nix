@@ -104,6 +104,7 @@
      vscode
      qbittorrent
      nodejs
+     hydralauncher
      (discord.override {
        withVencord = true;
      })
